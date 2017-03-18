@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        body{
+        	background: url('./1.jpg') no-repeat;
+       	}
+       	#m1{
+       		font-size:20px;
+       		color:green;
+       	}
+       	img{
+       		width:190px;
+       		height:170px;
+       	}
+       	#xin{
+              position:fixed;
+              bottom:50px;
+              left:60px;
+              opacity:0;
+              -webkit-animation:xin 8s linear infinite;
+              animation:xin 8s linear infinite;
+            }
+         @-webkit-keyframes xin{
+                0%{opacity:1;}/*从什么时候开始*/
+                20%{bottom:300px; left:300px;opacity:0;}
+                40%{bottom:460px; left:680px;opacity:1;}
+                60%{bottom:300px; left:900px;opacity:0;}
+                80%{bottom:50px; left:1100px;opacity:1;}
+               100%{bottom:-150px; left:760px;opacity:0;}
+            } 
+            @keyframes xin{
+                0%{opacity:1;}/*从什么时候开始*/
+                20%{bottom:300px; left:300px;opacity:0;}
+                40%{bottom:460px; left:680px;opacity:1;}
+                60%{bottom:300px; left:900px;opacity:0;}
+                80%{bottom:50px; left:1100px;opacity:1;}
+                100%{bottom:-150px; left:760px;opacity:0;}
+             }
+
+       	</style>
+    </head>
+    <body>
+        <embed src="./1.mp3" hidden="true" autostart='true' loop="true">
+        <marquee id="m1" behavior="alternate" direction="left">
+        	致最好的我们
+        </marquee>
+        <marquee behavior="scroll" direction="right">
+        	<img src="p.png">
+        </marquee>
+        <marquee behavior="alternate" direction="left" >
+        	<img src="x.jpg">
+        </marquee>
+        <marquee behavior="scoll" direction="right">
+        	<img src="z2.png">
+        </marquee>
+        <marquee id="m1" behavior="scroll" direction="left">
+        	喜欢我们在一起的日子
+        </marquee>
+        <div id="xin">
+        	<img src="./xin.png">
+        </div>
+    </body>
+    <script src="./jquery-1.11.1.min.js"></script>
+<script src="./snowfall.jquery.js"></script>
+<script>
+  $(document).snowfall('clear');
+  $(document).snowfall({
+    image: "huaban.png",
+    flakeCount:10,
+    minSize: 5,
+    maxSize: 25
+  });
+</script>
+
+
+</html>
